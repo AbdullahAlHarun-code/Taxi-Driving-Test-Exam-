@@ -10,3 +10,78 @@ class attribute
 
 id attribute 
 #red{color:red}
+
+Link design:
+a{}
+a[href="http://algoexpert.io"]{color:green} -> only algoexpert specific link
+a[href^="http://algoexpert.io"]{color:green} -> all algoexpert link start with this link
+
+Combination:
+footer p{color: red} -> only footer all p
+
+~ call tilde 
+h2 ~ p{color:green} -> any h2 and p sibling position all p will be green
+h2 + p{color:green} -> any h2 and p sibling position only first p and must immediate p will be green
+
+ Pseudo classes and element:
+ input:focus{}
+ input:invalid{}
+ input:invalid:not(:focus){}
+ a:link{}
+ a:visited{}
+ p:first-of-type{}
+ p:last-of-type{}
+ p:nth-of-type(1){}
+ p:nth-of-type(even){}
+ p:nth-of-type(odd){}
+ p:nth-of-type(2n-1){}
+
+ p:first-child{}
+ p:last-child{}
+ p:nth-child(1){}
+ p:nth-child(even){}
+ p:nth-child(odd){}
+ p:nth-child(2n-1){}
+
+ p::first-letter{}
+ p::last-letter{}
+ p::first-line{}
+ p::before{}
+ p::after{}
+
+ Selector Specificity:
+ -----------------------
+Inline styles:100pts
+Ids: 100pts
+classes: 10 pts 
+pseudo class: 10 pts 
+attributes: 1pts 
+elements: 1 pts 
+pseudo elements: 1 pts 
+
+1+10=11
+a[href="http://algoexpert.io"]{color:green}
+
+1+10+1=12
+section.links a{color:green}
+
+a{color:orange !important}
+
+
+CSS Units:
+-----------------
+px : pixels, absolute length 
+em : relative to font size 
+rem : relative to root element font size 
+vw : 1% of viewport width 
+vh : % of viewport height 
+ch : width of "0" character 
+% : percentages usually relative to percent value
+colors: 
+key words :red, blue, etc 
+hex RGB : #4B7DAF    4B   7D   AF
+                    red green blue
+RGB : rgb(75,125,175)
+RGB : rgb(75,125,175, 0.5) with opacity 
+HSL : hsl(210, 40%, 49%)
+HSL : hsl(210, 40%, 49%, 0.5) with opacity 
