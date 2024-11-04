@@ -1,2 +1,5 @@
 test design mock:
 --------------------------------
+react next
+tailwind
+mysql
