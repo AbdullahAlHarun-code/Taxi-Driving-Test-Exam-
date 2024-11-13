@@ -1,2 +1,23 @@
 /*h2~p{color:red}*/
 h2+p{color:red}
+#parent{
+    width:75%;
+    border:2px solid black;
+    
+}
+#red{
+    width:50%;
+    background-color: red;
+}
+#green{
+    width:50vw;
+    background-color: green;
+}
+#blue{
+    width:10rem; /* 1rem = 16px so 10rem = 160px*/
+    background-color: blue;
+}
+#parent div{
+    margin:10px;
+    color:white;
+}

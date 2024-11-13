@@ -82,6 +82,37 @@ key words :red, blue, etc
 hex RGB : #4B7DAF    4B   7D   AF
                     red green blue
 RGB : rgb(75,125,175)
-RGB : rgb(75,125,175, 0.5) with opacity 
+RGB : rgba(75,125,175, 0.5) with opacity 
 HSL : hsl(210, 40%, 49%)
 HSL : hsl(210, 40%, 49%, 0.5) with opacity 
+
+Block vs. Inline:
+----------------------
+display: block 
+display:inline-block
+
+Box Model: 
+-----------------
+margin border and padding 
+Box size:
+width: 100%
+width:calc(100% - 20px - 24px)
+box-sizing:content-box 
+box-sizing:border-box 
+
+Position:
+--------------------
+positon: relative, absolute, fixed 
+top, left, right, bottom 
+z-index 
+
+float:left , right 
+clear:left, right, both 
+
+Flexbox:
+=-------------
+display:flex 
+flex-drection: row wrap
+justify-content: center
+align-items: flex-start 
+align-content: space-around
