@@ -326,7 +326,7 @@ console.log(str4.split(' ')); // ['Hello', 'World']
 let str5 = '   Hello World   '; // extra space
 console.log(str5.trim()); // Hello World
 console.log(str5.trim().length); // 11
-cosnole.log(str5.trimEnd()); // Hello World
+//cosnole.log(str5.trimEnd()); // Hello World
 console.log(str5.trimEnd().length); // 14
 console.log(str5.trimStart()); // Hello World
 console.log(str5.trimStart().length); // 14
@@ -381,6 +381,7 @@ console.log(obj1); // {name: "Smith", age: 30, city: "New York"}
 console.log(obj == obj1); // false
 console.log(obj === obj1); // false
 // Map example
+// Methods: set(), get(), delete(), has(), clear(), size.
 let map = new Map();
 map.set('name', 'John');
 map.set('age', 30);
@@ -421,6 +422,274 @@ let key = {
     name: 'John'
 };
 weakMap.set(key, 'John');
+/*
+Summary
+Object: Key-value pairs with string keys, unordered.
+Map: Key-value pairs with keys of any type, ordered by insertion.
+Set: Unique values, ordered by insertion.
+*/
+
+// ----------------------------
+// now array define array all possible ways
+let arr = [10, 20, 30];
+console.log(arr);
+console.log(arr[0]); // 10
+console.log(arr[1]); // 20
+// array methods
+console.log(arr.length); // 3
+console.log(arr.push(40)); // 4 (add 40 at the end)
+console.log(arr); // [10, 20, 30, 40]
+console.log(arr.pop()); // 40 (remove 40 from the end)
+console.log(arr); // [10, 20, 30]
+console.log(arr.unshift(0)); // 4 (add 0 at the start)
+console.log(arr); // [0, 10, 20, 30]
+console.log(arr.shift()); // 0 (remove 0 from the start)
+console.log(arr); // [10, 20, 30]
+console.log(arr.indexOf(10)); // 0
+console.log(arr.indexOf(20)); // 1
+console.log(arr.indexOf(30)); // 2
+console.log(arr.indexOf(40)); // -1
+console.log(arr.includes(10)); // true
+console.log(arr.includes(20)); // true
+console.log(arr.includes(30)); // true
+console.log(arr.includes(40)); // false
+console.log(arr.join()); // 10,20,30 (default separator is comma)
+console.log(arr.join('')); // 102030 (no separator)
+console.log(arr.join('-')); // 10-20-30 (separator is -)
+console.log(arr.join(' ')); // 10 20 30 (separator is space)
+console.log(arr.reverse()); // [30, 20, 10]
+console.log(arr.sort()); // [10, 20, 30]    
+console.log(arr.concat(40, 50)); // [10, 20, 30, 40, 50] example 40 and 50 are added at the end of the array.
+console.log(arr.concat([40, 50])); // [10, 20, 30, 40, 50] example 40 and 50 are added at the end of the array.
+console.log(arr.concat([40, 50], [60, 70])); // [10, 20, 30, 40, 50, 60, 70] example 40, 50, 60 and 70 are added at the end of the array.
+console.log(arr.slice(0, 2)); // [10, 20] example 10 and 20 are sliced from the array.
+console.log(arr.slice(1, 3)); // [20, 30] example 20 and
+console.log(arr.slice(0, 3)); // [10, 20, 30] example 10
+console.log(arr.slice(1, 2)); // [20] example 20 is sliced from the array.
+console.log(arr.slice(1, 1)); // [] example nothing is sliced from the array.
+console.log(arr.slice(1, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(2, 1)); // [] example nothing is sliced from the array.
+console.log(arr.slice(2, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(0, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(0, 1)); // [10] example 10 is sliced from the array.
+console.log(arr.slice(0, 2)); // [10, 20] example 10 and
+// now other methods
+console.log(arr.toString()); // 10,20,30 (default separator is comma)
+console.log(arr.toString('')); // 102030 (no separator)
+console.log(arr.toString('-')); // 10-20-30 (separator is -)
+console.log(arr.toString(' ')); // 10 20 30 (separator is space)
+console.log(arr.toString()); // 10,20,30 (default separator is comma)
+// now other all methods exccept previous
+
+arr = [10, 20, 30];
+
+// concat()
+console.log(arr.concat([40, 50], [60, 70])); // [10, 20, 30, 40, 50, 60, 70] example 40, 50, 60 and 70 are added at the end of the array.
+
+// slice()
+console.log(arr.slice(0, 2)); // [10, 20] example 10 and 20 are sliced from the array.
+console.log(arr.slice(1, 3)); // [20, 30] example 20 and 30 are sliced from the array.
+console.log(arr.slice(0, 3)); // [10, 20, 30] example 10, 20 and 30 are sliced from the array.
+console.log(arr.slice(1, 2)); // [20] example 20 is sliced from the array.
+console.log(arr.slice(1, 1)); // [] example nothing is sliced from the array.
+console.log(arr.slice(1, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(2, 1)); // [] example nothing is sliced from the array.
+console.log(arr.slice(2, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(0, 0)); // [] example nothing is sliced from the array.
+console.log(arr.slice(0, 1)); // [10] example 10 is sliced from the array.
+console.log(arr.slice(0, 2)); // [10, 20] example 10 and 20 are sliced from the array.
+
+// toString()
+console.log(arr.toString()); // 10,20,30 (default separator is comma)
+console.log(arr.toString('')); // 102030 (no separator)
+console.log(arr.toString('-')); // 10-20-30 (separator is -)
+console.log(arr.toString(' ')); // 10 20 30 (separator is space)
+console.log(arr.toString()); // 10,20,30 (default separator is comma)
+
+// push()
+arr.push(40); // [10, 20, 30, 40]
+console.log(arr); // [10, 20, 30, 40]
+
+// pop()
+let lastElement = arr.pop(); // 40
+console.log(arr); // [10, 20, 30]
+console.log(lastElement); // 40
+
+// shift()
+let firstElement = arr.shift(); // 10
+console.log(arr); // [20, 30]
+console.log(firstElement); // 10
+
+// unshift()
+arr.unshift(0); // [0, 20, 30]
+console.log(arr); // [0, 20, 30]
+
+// splice()
+arr.splice(1, 1, 25, 35); // [0, 25, 35, 30]
+console.log(arr); // [0, 25, 35, 30]
+
+// forEach()
+arr.forEach(function(element) {
+    console.log(element); // 0, 25, 35, 30
+});
+
+// map()
+let newArr = arr.map(function(element) {
+    return element * 2;
+});
+console.log(newArr); // [0, 50, 70, 60]
+
+// filter()
+let filteredArr = arr.filter(function(element) {
+    return element > 20;
+});
+console.log(filteredArr); // [25, 35, 30]
+
+// reduce() example 0 + 25 + 35 + 30 = 90
+// reduce function explanation how it works 
+let sum = arr.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);
+console.log(sum); // 90
+
+// find()
+let found = arr.find(function(element) {
+    return element > 20;
+});
+console.log(found); // 25
+
+// findIndex()
+let index = arr.findIndex(function(element) {
+    return element > 20;
+});
+console.log(index); // 1
+
+// includes()
+let hasValue = arr.includes(25);
+console.log(hasValue); // true
+
+// indexOf()
+index = arr.indexOf(25);
+console.log(index); // 1
+
+// join()
+let str = arr.join('-');
+console.log(str); // "0-25-35-30"
+
+// reverse()
+arr.reverse();
+console.log(arr); // [30, 35, 25, 0]
+
+// sort()
+arr.sort();
+console.log(arr); // [0, 25, 30, 35]
+
+// ----------------------------
+
+// now function define function all possible ways
+function add(a, b) {
+    return a + b;
+}
+console.log(add(10, 20)); // 30
+// function expression
+let sub = function(a, b) {
+    return a - b;
+};
+console.log(sub(20, 10)); // 10
+// arrow function
+let mul = (a, b) => a * b;
+console.log(mul(10, 20)); // 200
+// function constructor
+let div = new Function('a', 'b', 'return a / b'); // not recommended because of security
+console.log(div(20, 10)); // 2
+// self-invoking function
+(function() {
+    console.log('Hello World');
+})(); // Hello World
+// function inside object
+let obj2 = {
+    add: function(a, b) {
+        return a + b;
+    }
+};
+console.log(obj2.add(10, 20)); // 30
+// function inside object shorthand
+let obj3 = {
+    add(a, b) {
+        return a + b;
+    }
+};
+console.log(obj3.add(10, 20)); // 30
+// function inside object arrow function
+let obj4 = {
+    add: (a, b) => a + b
+};
+console.log(obj4.add(10, 20)); // 30
+// function inside object arrow function shorthand
+let obj5 = {
+    add(a, b) {
+        return a + b;
+    }
+};
+console.log(obj5.add(10, 20)); // 30
+// function inside function
+function outer() {
+    function inner() {
+        console.log('Hello World');
+    }
+    inner();
+}
+outer(); // Hello World
+// function inside function with return
+function outer() {
+    function inner() {
+        return 'Hello World';
+    }
+    return inner();
+}
+console.log(outer()); // Hello World
+// function inside function with return and parameter
+function outer() {
+    function inner(name) {
+        return 'Hello ' + name;
+    }
+    return inner('John');
+}
+console.log(outer()); // Hello John
+console.log(outer('Smith')); // Hello John or Hello Smith which one is correct answer? and why? and how to fix it? 
+function outer(name) {
+    function inner(name='john') {
+        return 'Hello ' + name;
+    }
+    return inner(name);
+}
+console.log(outer('Smith')); // Hello Smith
+// function inside function with return and parameter
+
+// ----------------------------
+// function call in parameter from another function
+function add(a, b) {
+    return a + b;
+}
+function sub(a, b) {
+    return a - b;
+}
+function mul(a, b) {
+    return a * b;
+}
+function div(a, b) {
+    return a / b;
+}
+function calculate(a, b, operation) {
+    return operation(a, b);
+}
+console.log(calculate(10, 20, add)); // 30
+console.log(calculate(20, 10, sub)); // 10
+console.log(calculate(10, 20, mul)); // 200
+console.log(calculate(20, 10, div)); // 2
+
+
+
 
 
 
