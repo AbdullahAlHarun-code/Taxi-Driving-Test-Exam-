@@ -689,6 +689,182 @@ console.log(calculate(10, 20, mul)); // 200
 console.log(calculate(20, 10, div)); // 2
 
 
+// ----------------------------
+// now conditional statements
+let num5 = 10;
+if (num5 > 0) {
+    console.log('Positive');
+} else {
+    console.log('Negative');
+}
+// if else if
+if (num5 > 0) {
+    console.log('Positive');
+}
+else if (num5 < 0) {
+    console.log('Negative');
+}
+else {
+    console.log('Zero');
+}
+// switch case
+let day = 1;
+switch (day) {
+    case 1:
+        console.log('Sunday');
+        break;
+    case 2:
+        console.log('Monday');
+        break;
+    case 3:
+        console.log('Tuesday');
+        break;
+    case 4:
+        console.log('Wednesday');
+        break;
+    case 5:
+        console.log('Thursday');
+        break;
+    case 6:
+        console.log('Friday');
+        break;
+    case 7:
+        console.log('Saturday');
+        break;
+    default:
+        console.log('Invalid day');
+}
+// ternary operator
+let result = num5 > 0 ? 'Positive' : 'Negative';
+console.log(result);
+// multiple ternary operators
+let result1 = num5 > 0 ? 'Positive' : num5 < 0 ? 'Negative' : 'Zero';
+console.log(result1);  // Positive
+// nested ternary operators
+let result2 = num5 > 0 ? 'Positive' : num5 < 0 ? 'Negative' : num5 == 0 ? 'Zero' : 'Invalid';
+console.log(result2);  // Positive
+// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+// while loop
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+// do while loop
+let j = 0;
+do {
+    console.log(j);
+    j++;
+}
+while (j < 5);
+// break statement
+for (let i = 0; i < 5; i++) {
+    if (i == 3) {
+        break;
+    }
+    console.log(i);
+}
+// continue statement
+for (let i = 0; i < 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    console.log(i);
+}
+// nested loop
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        console.log(i, j);
+    }
+}
+// labeled loop
+outer: for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        console.log(i, j);
+        if (j == 1) {
+            break outer;
+        }
+    }
+}
+// labeled loop with continue
+outer: for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        if (j == 1) {
+            continue outer;
+        }
+        console.log(i, j);
+    }
+}
+// all for and foreach and forin and forof and while and do while and break and continue and nested loop and labeled loop and labeled loop with continue
+let arr6 = [10, 20, 30];
+console.log(arr6);
+// for loop
+for (let i = 0; i < arr6.length; i++) {
+    console.log(arr6[i]);
+}
+// for in loop
+for (let index in arr6) {
+    console.log(arr6[index]);
+}
+// for of loop
+for (let element of arr6) {
+    console.log(element);
+}
+// forEach loop
+arr6.forEach(function(element) {
+    console.log(element);
+});
+// while loop
+let i = 0;
+while (i < arr6.length) {
+    console.log(arr6[i]);
+    i++;
+}
+// do while loop
+let j = 0;
+do {
+    console.log(arr6[j]);
+    j++;
+}
+while (j < arr6.length);
+// break statement
+for (let i = 0; i < arr6.length; i++) {
+    if (arr6[i] == 20) {
+        break;
+    }
+    console.log(arr6[i]);
+}
+// continue statement
+for (let i = 0; i < arr6.length; i++) {
+    if (arr6[i] == 20) {
+        continue;
+    }
+    console.log(arr6[i]);
+}
+// forech loop
+arr6.forEach(function(element) {
+    if (element == 20) {
+        return;
+    }
+    console.log(element);
+});
+// forech loop shorthand
+arr6.forEach(element => {
+    if (element == 20) {
+        return;
+    }
+    console.log(element);
+});
+// oneline forech loop
+arr6.forEach(element => console.log(element));
+// nested loop  
+
+
+
+
 
 
 
